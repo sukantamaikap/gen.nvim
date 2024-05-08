@@ -27,6 +27,14 @@ return {
         prompt = "Render the following text as a markdown table:\n$text",
         replace = true,
     },
+    Explain_Code = {
+        prompt = "You are an experienced software engineer. Your job is to explain how code works. Please explain the ```$filetype``` code in details:\n```\n$text\n```",
+    },
+    Generate_Code = {
+        prompt = "You are an experienced software engineer. Your job is to write concise code with detailed comments explaining how your code works. Please write ```$filetype``` code based on the below comment: \n```$filetype\n$text\n```",
+        replace = true,
+        extract = "```$filetype\n(.-)```",
+    },
     Review_Code = {
         prompt = "Review the following code and make concise suggestions:\n```$filetype\n$text\n```",
     },
